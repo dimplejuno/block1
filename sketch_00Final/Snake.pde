@@ -19,8 +19,6 @@ class Snake {
 
   // 생성자 
   Snake() {
-    headImage = loadImage("snake.png");
-    imageMode(CENTER);
   }
 
   // 먹기 즉, 먹이의 위치 정보를 처리함. 먹었는지 알려줌.(리턴)
@@ -94,31 +92,7 @@ class Snake {
     }
 
     // 머리를 그림. 
-    //fill(255, 255, 255);
-    //ellipse(x+blocksize/2, y+blocksize/2, blocksize, blocksize);
-
-
-    if( xspeed == 0 && yspeed == -1) {
-      pushMatrix();
-      rotate(radians(180));
-      image(headImage, x+blocksize/2, y+blocksize/2, blocksize, blocksize);
-      popMatrix();
-    } else if ( xspeed == 0 && yspeed == 1) {
-      pushMatrix();
-      rotate(radians(0));
-      image(headImage, x+blocksize/2, y+blocksize/2, blocksize, blocksize);
-      popMatrix();
-    } else if ( xspeed == 1 && yspeed == 0) {
-      pushMatrix();
-      rotate(radians(270));
-      image(headImage, x+blocksize/2, y+blocksize/2, blocksize, blocksize);
-      popMatrix();
-    } else if ( xspeed == -1 && yspeed == 0) {
-      pushMatrix();
-      rotate(radians(90));
-      image(headImage, x+blocksize/2, y+blocksize/2, blocksize, blocksize);
-      popMatrix();
-    } 
-    
+    fill(255, 255, 255);
+    ellipse(x+blocksize/2, y+blocksize/2, blocksize, blocksize);
   }
 }
